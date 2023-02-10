@@ -1,0 +1,86 @@
+body{
+
+    background: #ececec;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+input[type=checkbox]{
+
+    width: 200px;
+    height: 100px;
+    -webkit-appearance: none;
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+    /* transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%; */
+    border-radius: 15px;
+    border: 8px solid #ececec;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+}
+input[type=checkbox]:after{
+
+    /* font-family: ''; */
+    
+    color: grey;
+    font-size: 20pt;
+}
+input[type=checkbox]:checked{
+
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+   inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+   inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+input[type=checkbox]:checked:after{
+    color: rgb(45, 145, 212);
+}
+#a_1:after{
+
+    content: 'MESAS';
+}
+#a_2:after{
+
+    content: 'GOLFINHOS';
+}
+#a_3:after{
+
+    content: 'RATOS';
+}
+#container{
+
+    background: rgba(128, 128, 128, 0.014);
+    margin-top: 100px;
+    text-align: center;
+}
+#btnResult{
+
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+    border: none;
+    margin: auto;
+    margin-top: 20px;
+    color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#btnResult:hover{
+
+    transform: scale(1.2);
+}

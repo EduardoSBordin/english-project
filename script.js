@@ -75,6 +75,7 @@ btnResult.addEventListener('click', () => {
     
     if(a1.checked){
         
+        //a2.disabled = true;
         score--;
         displayTryAgain();
         localS();
