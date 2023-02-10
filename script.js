@@ -75,20 +75,20 @@ btnResult.addEventListener('click', () => {
     
     if(a1.checked){
         
-        displayTryAgain();
         score--;
+        displayTryAgain();
         localS();
 
     } else if(a2.checked){
 
-        displayTryAgain();
         score--;
+        displayTryAgain();
         localS();
     }
      else if(a3.checked){
 
+         score++;
         displayRight();
-        score++;
         localS();
 
     }
