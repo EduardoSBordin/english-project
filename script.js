@@ -3,8 +3,10 @@ const a2 = document.querySelector('#a2');
 const a3 = document.querySelector('#a3');
 
 const btnResult = document.querySelector('#btnResult');
+const btnRemoveScore = document.querySelector('#btnRemoveScore');
 
-const result = document.querySelector('#result');
+let result = document.querySelector('#result');
+
 const scoreTxt = document.querySelector('#score');
 
 let time = 10;
@@ -15,6 +17,8 @@ function displayTryAgain(){
 
         const tag = document.createElement('h1');
             tag.innerHTML = 'Try Again';
+            tag.style.color = 'grey';
+            tag.style.transition = "0.3s";
             
             result.append(tag);
 
@@ -27,8 +31,8 @@ function displayTryAgain(){
                 time = 10;
                 tag.remove();
                 btnResult.disabled = false;
-                btnResult.style.background = 'white';
-                btnResult.style.color = 'black';
+                // btnResult.style.background = 'white';
+                // btnResult.style.color = 'black';
 
             }
             console.log(time);
@@ -53,37 +57,39 @@ function displayRight(){
                 time = 10;
                 tag.remove();
                 btnResult.disabled = false;
-                btnResult.style.background = 'white';
-                btnResult.style.color = 'black';
+                // btnResult.style.background = 'white';
+                // btnResult.style.color = 'black';
             }
             console.log(time);
         }, 100);
 }
+function localS(){
 
-btnResult.addEventListener('click', (e) => {
+    localStorage.setItem('getScore', score);
+    scoreTxt.innerHTML = localStorage.getItem('getScore');
+}
+
+btnResult.addEventListener('click', () => {
 
     btnResult.disabled = true;
-    btnResult.style.background = 'grey';
-    btnResult.style.color = 'white';
-
     
     if(a1.checked){
         
         displayTryAgain();
         score--;
-        scoreTxt.innerHTML = score;
+        localS();
 
     } else if(a2.checked){
 
         displayTryAgain();
         score--;
-        scoreTxt.innerHTML = score;
+        localS();
     }
      else if(a3.checked){
 
         displayRight();
         score++;
-        scoreTxt.innerHTML = score;
+        localS();
 
     }
 
@@ -94,3 +100,11 @@ btnResult.addEventListener('click', (e) => {
   
 });
 
+scoreTxt.innerHTML = localStorage.getItem('getScore');
+
+btnRemoveScore.addEventListener('click', () => {
+
+    localStorage.removeItem('getScore');
+    scoreTxt.innerHTML = localStorage.getItem('getScore');
+    score = 0;
+});
