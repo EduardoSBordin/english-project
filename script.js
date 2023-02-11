@@ -1,6 +1,9 @@
 const checkbox1 = document.querySelector('#a_1');
+checkbox1.style.color = 'grey';
 const checkbox2 = document.querySelector('#a_2');
+checkbox2.style.color = 'grey';
 const checkbox3 = document.querySelector('#a_3');
+checkbox3.style.color = 'grey';
 
 const btnResult = document.querySelector('#btnResult');
 const btnRemoveScore = document.querySelector('#btnRemoveScore');
@@ -16,7 +19,7 @@ let time = 10;
 function displayRight(){
 
     const tag = document.createElement('h1');
-    tag.innerHTML = 'Right';
+    tag.innerHTML = '+1';
     tag.style.color = 'grey';
 
     result.append(tag);
@@ -39,7 +42,7 @@ function displayRight(){
 function displayTryAgain(){
 
     const tag = document.createElement('h1');
-    tag.innerHTML = 'Try Again';
+    tag.innerHTML = '-1';
     tag.style.color = 'grey';
 
     result.append(tag);
@@ -69,22 +72,34 @@ checkbox1.addEventListener('click', () => {
 
     i++;
     if(i <= 1){
+
+        checkbox1.style.background = 'rgb(45, 212, 162)';
+
         checkbox2.disabled = true;
-        checkbox2.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox2.style.background = '#f2f2f2';
+        checkbox2.style.color = 'white';
         checkbox2.style.border = 'none';
 
         checkbox3.disabled = true;
-        checkbox3.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox3.style.background = '#f2f2f2';
+        checkbox3.style.color = 'white';
         checkbox3.style.border = 'none';
     }else{
         i = 0;
+
+        checkbox1.style.background = 'rgb(45, 212, 162, 0)';
+
         checkbox2.disabled = false;
-        checkbox2.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox2.style.border = '8px solid #ececec';
+        checkbox2.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox2.style.color = 'grey';
+        checkbox2.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox2.style.border = 'none';
 
         checkbox3.disabled = false;
-        checkbox3.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox3.style.border = '8px solid #ececec';
+        checkbox3.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox3.style.color = 'grey';
+        checkbox3.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox3.style.border = 'none';
     }
     console.log(i);
 })
@@ -93,23 +108,35 @@ checkbox2.addEventListener('click', () => {
 
     i++;
     if(i <= 1){
+
+        checkbox2.style.background = 'rgb(45, 212, 162)';
+
         checkbox1.disabled = true;
-        checkbox1.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox1.style.background = '#f2f2f2';
+        checkbox1.style.color = 'white';
         checkbox1.style.border = 'none';
 
         checkbox3.disabled = true;
-        checkbox3.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox3.style.background = '#f2f2f2';
+        checkbox3.style.color = 'white';
         checkbox3.style.border = 'none';
         
     }else{
         i = 0;
+
+        checkbox2.style.background = 'rgb(45, 212, 0, 0)';
+
         checkbox1.disabled = false;
-        checkbox1.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5),10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox1.style.border = '8px solid #ececec';
+        checkbox1.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox1.style.color = 'grey';
+        checkbox1.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox1.style.border = 'none';
 
         checkbox3.disabled = false;
-        checkbox3.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5),10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox3.style.border = '8px solid #ececec';
+        checkbox3.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox3.style.color = 'grey';
+        checkbox3.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox3.style.border = 'none';
     }
     console.log(i);
 });
@@ -118,22 +145,33 @@ checkbox3.addEventListener('click', () => {
 
     i++;
     if(i <= 1){
+
+        checkbox3.style.background = 'rgb(45, 212, 162)';
+
         checkbox1.disabled = true;
-        checkbox1.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox1.style.background = '#f2f2f2';
+        checkbox1.style.color = 'white';
         checkbox1.style.border = 'none';
 
         checkbox2.disabled = true;
-        checkbox2.style.boxShadow = 'rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset';
+        checkbox2.style.background = '#f2f2f2';
+        checkbox2.style.color = 'white';
         checkbox2.style.border = 'none';
     }else{
         i = 0;
+        checkbox3.style.background = 'rgb(45, 212, 0, 0)';
+
         checkbox1.disabled = false;
-        checkbox1.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5),10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox1.style.border = '8px solid #ececec';
+        checkbox1.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox1.style.color = 'grey';
+        checkbox1.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox1.style.border = 'none';
 
         checkbox2.disabled = false;
-        checkbox2.style.boxShadow = '-10px -10px 15px rgba(255, 255, 255, 0.5),10px 10px 15px rgba(70, 70, 70, 0.12)';
-        checkbox2.style.border = '8px solid #ececec';
+        checkbox2.style.background = 'rgba(0, 0, 0, 0)';
+        checkbox2.style.color = 'grey';
+        checkbox2.style.boxShadow = 'rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px';
+        checkbox2.style.border = 'none';
     }
     console.log(i);
 });
@@ -141,11 +179,7 @@ checkbox3.addEventListener('click', () => {
 btnResult.addEventListener('click', () => {
     btnResult.disabled = true;
     
-        if(checkbox1.checked && checkbox2.checked){
-            
-            alert('Choose just 1 option');
-        }
-        else if(checkbox1.checked){
+        if(checkbox1.checked){
             score--;
             displayTryAgain();
             localS();
