@@ -9,8 +9,18 @@
 </head>
 <body>
 
-    <div id="container">
+    <section id="container">
 
+    <div id="titles">
+
+        <h1>Leia e responda:</h1>
+
+        <h5>I have a mouse. If I get another one. I will have two "mice"</h5>
+
+        <h4>O que 'mice' signifca ?</h4>
+    </div>
+
+    <div id="questions">
     <label for="">
     <input type="checkbox" name="" id="a_1">
     </label>
@@ -22,10 +32,21 @@
     <label for="">
         <input type="checkbox" name="" id="a_3">
     </label>
-
-    <button id="btnResult">Check</button>
-    
     </div>
+
+    <div id="btns">
+    <button id="btnResult">Check</button>
+    <button id="btnRemoveScore">Remove Score</button>
+    </div>
+
+    <div id="divResult">
+        <span id="score">0</span>
+        <br>
+        <span id="result"></span>
+
+    </div>
+
+    </section>
 
 <script src="./scriptTest.js"></script>
 </body>
